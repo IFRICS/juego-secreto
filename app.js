@@ -74,4 +74,22 @@ function reiniciarJuego() {
 condicionesIniciales();
 console.log(numeroSecreto);
 
+let amigos = [];
 
+function agregarAmigo() {
+    // 1. Capturar el valor del campo de entrada
+    let input = document.getElementById("nombreAmigo");
+    let nombre = input.value.trim();
+
+    // 2. Validar la entrada
+    if (nombre === "") {
+        alert("Por favor, inserte un nombre.");
+        return;
+    }
+
+    // 3. Actualizar el array de amigos
+    amigos.push(nombre);
+
+    // 4. Limpiar el campo de entrada
+    input.value = "";
+}
